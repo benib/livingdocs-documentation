@@ -1,11 +1,10 @@
-const syntaxHighlight = require('../../lib/syntax-highlight.js')
+const syntaxHighlight = require('../lib/syntax-highlight.js')
 exports.handler = async function http(req) {
   try {
     const body = JSON.parse(req.body)
     const params = body.params
 
     const res = syntaxHighlight(params)
-    console.log(res)
 
     return {
       headers: {

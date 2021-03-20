@@ -4,7 +4,7 @@ const liClient = new liSDK.Client({
   accessToken: process.env.LI_TOKEN
 })
 
-const syntaxHighlight = require('../lib/syntax-highlight.js')
+const syntaxHighlight = require('../api/lib/syntax-highlight.js')
 
 exports.handler = async function http (req) {
   const documentId = req.pathParameters.id
