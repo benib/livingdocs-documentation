@@ -1,2 +1,0 @@
-# livingdocs-documentation
-Begin app
