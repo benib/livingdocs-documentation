@@ -21,7 +21,7 @@ exports.handler = async function http (req) {
     codeInclude.resolve({
       value: res,
     })
-    if (res.dependencies?.css) {
+    if (res.dependencies && res.dependencies.css) {
       for (const dep of res.dependencies.css) {
         livingdoc.addCssDependency(dep)
       }
