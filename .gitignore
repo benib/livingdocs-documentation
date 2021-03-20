@@ -1,5 +1,6 @@
 /node_modules/
 /public/build/
-
+.livingdocs-cli
+config-sync
 .arc-env
 .DS_Store

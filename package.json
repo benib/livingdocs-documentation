@@ -10,6 +10,9 @@
   },
   "arc": {
     "app": "svelte-app",
+    "shared": {
+      "src": "lib"
+    },
     "http": [
       {
         "/api": {
