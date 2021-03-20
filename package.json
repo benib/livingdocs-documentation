@@ -11,7 +11,7 @@
   "arc": {
     "app": "svelte-app",
     "shared": {
-      "src": "lib"
+      "src": "shared"
     },
     "http": [
       {

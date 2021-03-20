@@ -1,4 +1,4 @@
-const syntaxHighlight = require('../../lib/syntax-highlight.js')
+const syntaxHighlight = require('@architect/shared/syntax-highlight.js')
 exports.handler = async function http(req) {
   try {
     const body = JSON.parse(req.body)
