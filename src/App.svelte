@@ -1,19 +1,26 @@
 <script>
   import { onMount } from 'svelte'
-  export let name
-  export let message
+  export let nodes = []
   onMount(async () => {
     let data = await (await fetch('/api')).json()
-    message = data.msg
-    console.log('MESSAGE: ', message)
+    let menu = data.menu
+
+    console.log(menu)
+    nodes = menu.nodes
+    console.log(nodes)
   })
 </script>
 
 <main>
-  <h1>Hello {name}!</h1>
-  <h2>{message}</h2>
-  <h3>Change me!</h3>
-  <p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+  <h1>Livingdocs Documentation</h1>
+  <!-- {@debug nodes} -->
+  <ul>
+    {#each nodes as entry}
+      <li>
+        <a href="/doc/{entry.documentId}">{entry.label}</a>
+      </li>
+    {/each}
+  </ul>
 </main>
 
 <style>

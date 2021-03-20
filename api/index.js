@@ -1,5 +1,13 @@
+const liSDK = require('@livingdocs/node-sdk')
+const liClient = new liSDK.Client({
+  url: process.env.LI_API_HOST,
+  accessToken: process.env.LI_TOKEN
+})
+
 exports.handler = async function http (req) {
-  console.log('Begin API called')
+  
+  const [menu] = await liClient.getMenus({handle: 'documentation'})
+
   return {
     headers: {
       'content-type': 'application/json; charset=utf8',
@@ -7,7 +15,7 @@ exports.handler = async function http (req) {
     },
     statusCode: 200,
     body: JSON.stringify({
-      msg: 'Hello from Svelte + your Begin API!'
+      menu
     })
   }
 }

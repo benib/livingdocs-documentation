@@ -16,6 +16,18 @@
           "method": "get",
           "src": "/api"
         }
+      },
+      {
+        "/api/syntax-highlight": {
+          "method": "post",
+          "src": "/api/syntax-highlight"
+        }
+      },
+      {
+        "/doc/:id": {
+          "method": "get",
+          "src": "/doc"
+        }
       }
     ],
     "tables": [
@@ -42,6 +54,9 @@
   },
   "dependencies": {
     "@architect/sandbox": "^3.3.7",
-    "@begin/data": "^1.2.3"
+    "@begin/data": "^1.2.3",
+    "@livingdocs/node-sdk": "^0.6.5",
+    "prettier": "^2.2.1",
+    "prismjs": "^1.23.0"
   }
 }
